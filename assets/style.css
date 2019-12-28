@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+
+    :root{
+        --bg-c: #2D3142;
+        --text-c: #ffff;
+        --font-s: 18px;
+        --cov-c: #7d93a1;
+        --text-s: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+/*background*/
+body {
+    background: var(--bg-c);
+    font-family: 'Raleway', sans-serif;
+    color: var(--text-c);
+    text-shadow: var(--text-s);
+}
+/*text options*/
+.scorefield{
+    background-color: transparent;
+    width: 20px;
+    height: 30px;
+    left: 1050px;
+    top: 200px;
+    position: absolute;
+    text-align: center;
+    font-size: 16pt;
+    color: white;
+    text-shadow: var(--text-s);
+}
+/*buttons*/
+.startgamebutton {
+    position: absolute;
+    left: 968px;
+    top: 114px;
+    z-index: 2;
+    display: inline-flex;
+    height: 30px;
+    width: 120px;
+    border: 2px solid #b3b4b4;
+    margin: 20px 20px 20px 20px;
+    color: #BFC0C0;
+    background: var(--bg-c);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .8em;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+a {
+    color: #BFC0C0;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+#button-3 {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#button-3 a {
+    position: relative;
+    transition: all .45s ease-Out;
+}
+
+#circle {
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+    line-height: 40px;
+    border-radius: 50%;
+    background: #BFC0C0;
+    position: absolute;
+    transition: all .5s ease-Out;
+    top: 20px;
+    left: 70px;
+}
+
+#button-3:hover #circle {
+    width: 200%;
+    height: 500%;
+    opacity: 1;
+    top: -70px;
+    left: -70px;
+}
+
+#button-3:hover a {
+    color: #2D3142;
+}
+
+
+.showhighscore {
+    position: absolute;
+    left: 800px;
+    top: 150px;
+    z-index: 2;
+    display: inline-flex;
+    height: 30px;
+    width: 120px;
+    border: 2px solid #b3b4b4;
+    margin: 20px 20px 20px 20px;
+    color: #BFC0C0;
+    background: var(--bg-c);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .8em;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.logout{
+    position: absolute;
+    left: 632px;
+    top: 186px;
+    z-index: 2;
+    display: inline-flex;
+    height: 30px;
+    width: 120px;
+    border: 2px solid #b3b4b4;
+    margin: 20px 20px 20px 20px;
+    color: #BFC0C0;
+    background: var(--bg-c);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .8em;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/*buttons end*/
+/*score box*/
+#addscore{
+    position: absolute;
+    left: 925px;
+    top: 0;
+    height: 20px;
+    /*border: 3px solid red;*/
+    font-size: var(--font-s);
+}
+
+/*timer box*/
+#time{
+    left: 800px;
+    top: 0;
+    width: 40px;
+    height: 20px;
+    position: absolute;
+    /*border: 3px solid green;*/
+    color: var(--text-c);
+    font-size: var(--font-s);
+    text-shadow: var(--text-s);
+}
+
+/*veryga div*/
+#verg {
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    /*border: 3px solid blue;*/
+    position: absolute;
+    /*background-color: red;*/
+    background-image: url(veryga.png);
+}
+
+/*@TODO:remove borders from all divs*/
+/*beer div*/
+#cento {
+    height: 50px;
+    width: 25px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    top: 250px;
+    left: 300px;
+    /*border: 3px solid blue;*/
+    position: absolute;
+    /*background-color: red;*/
+    background-image: url(cento.jpg);
+}
+
+/*game areana size*/
+#gamearea{
+    background-color: transparent;
+    width: 950px;
+    height: 500px;
+    left: 10px;
+    top: 25px;
+    position: absolute;
+    border: 2px solid blue;
+}
+
+/*estaitc cover*/
+#topcover{
+    position: absolute;
+    width: 955px;
+    height: 25px;
+    left: 10px;
+    top: 0;
+    z-index: -1;
+    background-color: var(--cov-c);
+    text-align: right;
+    vertical-align: middle;
+    line-height: 25px;
+    text-shadow: var(--text-s);
+}
