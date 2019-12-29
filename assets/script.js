@@ -12,7 +12,7 @@ function start() {
             console.log("score:", score);
         } else {
             $('#time').text(gametimer);
-            console.log("Timer --> " + gametimer);
+            // console.log("Timer --> " + gametimer);
         }
     }, 1000);
 }
@@ -35,7 +35,7 @@ function callajax(X) {
         },
         success: function (data) {
             $('#result').html(data);
-            console.log("i am working");
+            // console.log("i am working");
         }
     });
 }
@@ -72,9 +72,9 @@ function logKey(e) {
         verg.style.position = "absolute";
         verg.style.left = x + 'px';
         verg.style.top = y + 'px';
-        // console.log(x + "  " + y); //Debug cordinates to consule
+        // console.log(x + "  " + y); //Debug cordinates to console
         // colision();
-        console.log(colision())
+        colision();
     }
 }
 
@@ -104,19 +104,19 @@ function artelpa(vergX, vergY) {
     let leist = true;
     if (60 > (parseInt(verg.style.top.slice(0, -2)) + vergY)){
         leist = false;
-        console.log("stop v");
+        // console.log("stop v");
     }
     if (950 < (parseInt(verg.style.top.slice(0, -2)) + vergY)) {
         leist = false;
-        console.log("stop a");
+        // console.log("stop a");
     }
     if (22 > (parseInt(verg.style.left.slice(0, -2)) + vergX)) {
         leist = false;
-        console.log("stop k");
+        // console.log("stop k");
     }
     if (1800 < (parseInt(verg.style.left.slice(0, -2)) + vergX)) {
         leist = false;
-        console.log("stop d");
+        // console.log("stop d");
     }
     return leist;
 }

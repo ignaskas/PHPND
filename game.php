@@ -24,7 +24,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 </head>
 <body>
-    <?php echo $_SESSION ['username'] ?>
+    <div id="usernamediv">
+        Welcome <?php echo $_SESSION ['username'] ?>
+    </div>
     <p id="result"></p>
     <div onclick="start()" class="startgamebutton" id="button-3">
         <div id="circle"></div>
@@ -34,12 +36,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <div id="circle"></div>
         <a href="#">High Score</a>
     </div>
-    <div onclick="logout()" class="logout" id="button-3">
-        <div id="circle"></div>
-        <a href="#">LogOut</a>
-    </div>
-    <form style="position: absolute; left: 1000px;" action="logout.php" method="get">
-        <input type="submit" value="Logout For Now">
+    <form id="button-3" class="logout" action="logout.php" method="get">
+        <input id="circle" type="submit" value= "">
+            LogOut
     </form>
     <div id="showscore">
         Top 10 players!<br>

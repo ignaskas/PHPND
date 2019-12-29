@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// redirect if not logedin
+// redirect if  logedin
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     $_SESSION['username'] = $username;
     header("location: game.php");
