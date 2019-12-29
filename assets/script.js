@@ -29,7 +29,7 @@ function addscore() {
 function callajax(X) {
     $.ajax({
         type: "POST",
-        url: 'server.php',
+        url: 'scorew.php',
         data: {
             myscore: score
         },
@@ -44,7 +44,6 @@ verg.style.left = 400 + 'px';
 verg.style.top = 230 + 'px';
 document.addEventListener('keydown', logKey);
 // laukas = document.getElementById("laukas");
-//@TODO: wy do arrow keys not work?
 function logKey(e) {
     let x = verg.style.left.slice(0,-2);
     let y = verg.style.top.slice(0,-2);
@@ -123,7 +122,7 @@ function artelpa(vergX, vergY) {
 }
 // let score = 0;
 //colision detector on colide call addscore and spawn a new beer in a random location
-//@TODO: top and left side some times fully stops player from moving in any direction
+
 function colision(vergX,vergY) {
     let centobox = cento.getBoundingClientRect();
     let vergbox =  verg.getBoundingClientRect();
@@ -145,3 +144,7 @@ function colision(vergX,vergY) {
     return colide;
 }
 
+$("#showscore").hide();
+$(".showhighscore").click(function(){
+    $("#showscore").toggle();
+});
